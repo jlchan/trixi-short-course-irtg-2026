@@ -1,0 +1,37 @@
+{
+  "name": "Trixi.jl short course (IRTG 2026)",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    // Installs Julia via juliaup and the Julia VS Code extension. Keep the channel
+    // consistent with the Julia version that generated `Manifest.toml`.
+    "ghcr.io/julialang/devcontainer-features/julia:1": {
+      "channel": "1.12"
+    }
+  },
+  // 4 cores for the multithreading demos and faster precompilation
+  "hostRequirements": {
+    "cpus": 4
+  },
+  "containerEnv": {
+    "JULIA_NUM_THREADS": "auto",
+    // headless plotting with the GR backend of Plots.jl
+    "GKSwstype": "100"
+  },
+  // Runs during prebuilds as well, so prebuilt codespaces start with precompiled packages
+  "updateContentCommand": "julia --project=. -e 'using Pkg; Pkg.instantiate(); Pkg.precompile()'",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "julialang.language-julia"
+      ],
+      "settings": {
+        "julia.NumThreads": "auto"
+      }
+    },
+    "codespaces": {
+      "openFiles": [
+        "README.md"
+      ]
+    }
+  }
+}

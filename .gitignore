@@ -1,0 +1,5 @@
+# simulation output of Trixi.jl
+out*/
+*.gif
+
+.DS_Store
