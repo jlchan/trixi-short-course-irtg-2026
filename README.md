@@ -33,6 +33,9 @@ your codespace when you no longer need it.
 
 ## Contents
 
+- [`elixirs/elixir_advection_basic.jl`](elixirs/elixir_advection_basic.jl):
+  The simplest Trixi.jl setup, 2D linear advection with periodic boundaries, which shows
+  the same anatomy as `elixir_euler_basic.jl` with a single DGSEM solver line.
 - [`elixirs/elixir_euler_basic.jl`](elixirs/elixir_euler_basic.jl):
   A minimal elixir that shows the anatomy of a Trixi.jl simulation (equations, solver,
   mesh, semidiscretization, callbacks, time integration) for a weak blast wave of the
