@@ -43,3 +43,6 @@ your codespace when you no longer need it.
 - [`elixirs/elixir_euler_richtmyer_meshkov.jl`](elixirs/elixir_euler_richtmyer_meshkov.jl):
   Richtmyer-Meshkov instability for the compressible Euler equations, using entropy
   stable flux differencing with shock capturing on a `P4estMesh`.
+
+See [`elixirs/README.md`](elixirs/README.md) for things to try with the Richtmyer-Meshkov
+elixir.
