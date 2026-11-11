@@ -167,4 +167,5 @@ p_rho = plot(pd["rho"], aspect_ratio = 1,
              title = "Density at t = $(round(sol.t[end], digits = 3))")
 p_mesh = plot(getmesh(pd), aspect_ratio = 1, linewidth = 0.5,
               xlims = (0.0, 0.6), ylims = (0.0, 0.1), title = "Adapted mesh")
-plot(p_rho, p_mesh, layout = (2, 1), size = (900, 500))
+p = plot(p_rho, p_mesh, layout = (2, 1), size = (900, 500))
+savefig(p, "sol.png")
