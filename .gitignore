@@ -3,3 +3,6 @@ out*/
 *.gif
 
 .DS_Store
+
+# slides (kept locally)
+presentation/
