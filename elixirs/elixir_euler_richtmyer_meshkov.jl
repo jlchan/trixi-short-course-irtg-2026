@@ -67,7 +67,8 @@ coordinates_max = (0.6, 0.1)
 mesh = P4estMesh(trees_per_dimension; polydeg, coordinates_min, coordinates_max,
                  periodicity = (false, true))
 
-# Characteristic upwind boundary condition for the 2D compressible Euler equations
+# Custom implementation of the characteristic upwind boundary condition 
+# for the 2D compressible Euler equations
 struct BoundaryConditionCharacteristicUpwind{B}
     boundary_value_function::B
 end
